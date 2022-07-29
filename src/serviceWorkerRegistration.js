@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 // This optional code is used to register a service worker.
 // register() is not called by default.
 
@@ -34,6 +35,7 @@ export function register(config) {
 
       if (isLocalhost) {
         // This is running on localhost. Let's check if a service worker still exists or not.
+        // eslint-disable-next-line no-use-before-define
         checkValidServiceWorker(swUrl, config);
 
         // Add some additional logging to localhost, pointing developers to the
@@ -46,6 +48,7 @@ export function register(config) {
         });
       } else {
         // Is not localhost. Just register service worker
+        // eslint-disable-next-line no-use-before-define
         registerValidSW(swUrl, config);
       }
     });
